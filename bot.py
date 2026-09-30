@@ -1326,7 +1326,7 @@ def extract_otp_code(text):
     if g_match: return g_match.group(1)
 
     # 4. Digit sequences fallback
-    digit_matches = re.findall(r'(? max(final_n_idx, final_m_idx):
+    digit_matches = re.findall(r'\b\d{4,6}\b', search_text)
                         # HTML টেবিল থেকে টেক্সট বের করা
                         num_text = cols[final_n_idx].get_text(separator=" ", strip=True)
                         msg_text = cols[final_m_idx].get_text(separator=" ", strip=True)
